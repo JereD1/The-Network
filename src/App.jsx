@@ -4,7 +4,6 @@ import Home from './pages/home/page';
 
 const App = () => {
     return (
-
       <div className=''>
         <Router> 
             <Routes>
@@ -14,18 +13,6 @@ const App = () => {
                </Router>
         
                </div>
-
-      <div>
-        <div className=''>
-     <h1>hello</h1>
-        </div>
-            <Router> 
-                <Routes>
-                    <Route path="/login" element={<Login />} />
-                </Routes>
-            </Router>    
-        </div>
-
     );
 };
 
