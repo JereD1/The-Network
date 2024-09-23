@@ -10,3 +10,8 @@
   list-style: none;
   font-family: "Roboto", sans-serif;
 }
+
+.John{
+  object-fit: cover;
+  object-position: 20% 100%;
+}
