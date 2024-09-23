@@ -1,18 +1,17 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './pages/login/page';
+import Home from './pages/home/page';
 
 const App = () => {
     return (
-      <div>
-        <div className='bg-black'>
-     <h1>hello</h1>
-        </div>
+      <div className=''>
         <Router> 
             <Routes>
+                <Route path="/home" element={<Home />} />
                 <Route path="/login" element={<Login />} />
             </Routes>
                </Router>
-               
+        
                </div>
     );
 };
