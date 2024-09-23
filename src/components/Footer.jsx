@@ -23,19 +23,32 @@ const Footer = () => {
       </div>
       <div className='flex flex-col'>
         <h3 className='font-bold mb-2'>Resources</h3>
-        <p>Email: support@example.com</p>
-        <p>Phone: (123) 456-7890</p>
+        <li>Blog</li>
+        <li>Customer Stories</li>
+        <li>Podcast</li>
       </div>
-      <div className='flex flex-col'>
-        <h3 className='font-bold mb-2'>Follow Us</h3>
-        <p>Stay connected on social media.</p>
-        <p>
-          <a href="#" className="text-blue-400">Facebook</a>
-          <br />
-          <a href="#" className="text-blue-400">Twitter</a>
-          <br />
-          <a href="#" className="text-blue-400">Instagram</a>
-        </p>
+      <div className='flex flex-col justify-center items-center'>
+        <div className='bg-white px-4 py-6 rounded-lg w-auto'>
+            <h1 className='text-black mb-10 font-bold'>Subscribe to our newsletter</h1>
+            <form action="">
+            <div className="mb-4">
+                    <label className="block text-black text-sm font-bold mb-2">Email</label>
+                    <input
+                        type="email"
+                        placeholder='Enter your email'
+                        className="border rounded-lg w-72 py-2 px-3 text-gray-700 bg-gray-100 "
+                        required
+                    />
+                </div>
+                <div className='flex justify-center items-center'>
+                <button className='bg-green-800 px-28 py-2 rounded-lg hover:'>
+                    Subscribe
+                </button>
+                </div>
+                
+            </form>
+        </div>
+        
       </div>
     </div>
   );
