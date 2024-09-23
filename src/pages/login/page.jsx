@@ -1,18 +1,20 @@
 import React from 'react'
-import SidePage from './SIdePage'
+import SidePage from '../../components/SidePage'
+import RightPage from '../../components/RightPage'
 
 const page = () => {
   return (
     <div>
-      <div className='flex border-2 bg-black'>
+      <div className='flex'>
         <div className='flex-1 p-20'>
         {/* left column content */}
         <SidePage />
-        Left side
+        
         </div>
         <div className='flex-1 p-20'>
             {/* Right column content */}
-            <h1>Right side</h1>
+            < RightPage />
+            <h2>div</h2>
         </div>
       </div>
     </div>
