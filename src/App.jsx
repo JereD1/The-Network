@@ -7,13 +7,12 @@ const App = () => {
         <div className=''>
      <h1>hello</h1>
         </div>
-        <Router> 
-            <Routes>
-                <Route path="/login" element={<Login />} />
-            </Routes>
-               </Router>
-               
-               </div>
+            <Router> 
+                <Routes>
+                    <Route path="/login" element={<Login />} />
+                </Routes>
+            </Router>    
+        </div>
     );
 };
 

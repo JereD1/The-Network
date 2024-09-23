@@ -10,25 +10,21 @@ const SidePage = () => {
   return (
     <div className='flex flex-col'>
       <div className='bg-green-50 px-6 py-5'>
-        <img src={NetworkLogo} alt='Network Logo' className='w-20' />
-        <div className='mt-40 mb-40'>
-          <p>Master your tech stack </p>
-          <h2>Our registeration process is quick and easy, takes 2-3 minutes to complete</h2>
-        </div>
-        <div className='bg-zinc-800 mb-28 px-10 py-6'>
-          <h2 className='text-white mb-2'>{Quote} </h2>
-          <div className='flex gap-4 my-4'>
-          <img src={John} alt='Albert Einstein'  className='John w-14 h-14 contain rounded-full' />
-          <div className='flex flex-col'>
-            <h2 className='text-white'>John F. Kennedy </h2>
-            <h3 className='text-zinc-400'>35th U.S President</h3>
+          <img src={NetworkLogo} alt='Network Logo' className='w-20' />
+          <div className='mt-40 mb-40'>
+            <p>Master your tech stack </p>
+            <h2>Our registeration process is quick and easy, takes 2-3 minutes to complete</h2>
           </div>
+          <div className='bg-zinc-800 mb-28 px-10 py-6'>
+            <h2 className='text-white mb-2'>{Quote} </h2>
+              <div className='flex gap-4 my-4'>
+                <img src={John} alt='Albert Einstein'  className='John w-14 h-14 contain rounded-full' />
+                <div className='flex flex-col'>
+                  <h2 className='text-white'>John F. Kennedy </h2>
+                  <h3 className='text-zinc-400'>35th U.S President</h3>
+                </div>
+              </div>
           </div>
-          
-
-
-        </div>
-
         </div>
     </div>
   )
