@@ -1,17 +1,22 @@
 import React, { useState } from 'react';
-import { auth, googleProvider, db } from '../../firebase/firebaseConfig';
-import { signInWithPopup } from 'firebase/auth';
-import { doc, setDoc } from 'firebase/firestore';
+import { auth } from '../../firebase/firebaseConfig';
+import { FcGoogle } from "react-icons/fc";
+import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { doc, setDoc, getFirestore } from 'firebase/firestore';
 
 const SignUpGoogleButton = () => {
     const [error, setError] = useState('');
-    const [username, setUsername] = useState(''); // State for username
-    const [points, setPoints] = useState(0); // State for points
+    const provider = new GoogleAuthProvider();
+    const db = getFirestore();
 
     const signInWithGoogle = async () => {
         try {
-            const result = await signInWithPopup(auth, googleProvider);
-            const user = result.user;
+            const userCredential = await signInWithPopup(auth, provider);
+            const user = userCredential.user;
+
+            // Define username and points (adjust these values as needed)
+            const username = user.displayName || 'Anonymous'; // Example username
+            const points = 0; // Default points
 
             // Store user in Firestore
             await setDoc(doc(db, 'users', user.uid), {
@@ -27,29 +32,12 @@ const SignUpGoogleButton = () => {
     };
 
     return (
-        <div className="container mx-auto p-4">
-            <h1 className="text-2xl font-bold mb-4">Sign Up with Google</h1>
-            {error && <p className="text-red-500 mb-4">{error}</p>}
-            <input
-                type="text"
-                placeholder="Enter your username"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-                className="border mb-4 p-2"
-            />
-            <input
-                type="number"
-                placeholder="Enter points"
-                value={points}
-                onChange={(e) => setPoints(Number(e.target.value))}
-                className="border mb-4 p-2"
-            />
-            <button
-                onClick={signInWithGoogle}
-                className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded"
-            >
-                Sign Up with Google
+        <div className='flex justify-center items-center my-4'>
+            <button onClick={signInWithGoogle} className='flex justify-center gap-2 items-center border-2 rounded-lg w-[400px] p-2'>
+                <FcGoogle size={25} className='' />
+                <span className='text-black'>Sign up with Google</span>
             </button>
+            {error && <p className='text-red-500'>{error}</p>}
         </div>
     );
 }

@@ -2,7 +2,6 @@ import React from 'react'
 import NetworkLogo from '../assets/The Network Logo.png'
 import John from '../assets/john.jpg'
 
-
 const SidePage = () => {
  
   const Quote = "Leadership and learning are indispensable to each other. The one cannot exist without the other. The success of any organization or community depends on the ability to learn from the past and adapt to new challenges.";
