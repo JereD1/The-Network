@@ -7,8 +7,9 @@ const CreateAccount = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [username, setUsername] = useState('');
-    const [points, setPoints] = useState(0);
     const [error, setError] = useState('');
+
+   
 
     const handleSignUp = async (e) => {
         e.preventDefault();
@@ -64,17 +65,6 @@ const CreateAccount = () => {
                         type="text"
                         value={username}
                         onChange={(e) => setUsername(e.target.value)}
-                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700"
-                        required
-                    />
-                </div>
-
-                <div className="mb-4">
-                    <label className="block text-gray-700 text-sm font-bold mb-2">Points</label>
-                    <input
-                        type="number"
-                        value={points}
-                        onChange={(e) => setPoints(Number(e.target.value))} // Convert to number
                         className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700"
                         required
                     />

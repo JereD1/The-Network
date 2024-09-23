@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
-import { auth, googleProvider, db } from '../../firebase/firebaseConfig';
-import { signInWithPopup } from 'firebase/auth';
+import {  auth,  db } from '../../firebase/firebaseConfig';
+import {  signInWithPopup } from 'firebase/auth';
 import { doc, setDoc } from 'firebase/firestore';
 
 const SignUpGoogleButton = () => {
     const [error, setError] = useState('');
     const [username, setUsername] = useState(''); // State for username
     const [points, setPoints] = useState(0); // State for points
+
+   
 
     const signInWithGoogle = async () => {
         try {

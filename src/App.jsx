@@ -4,7 +4,7 @@ import Login from './pages/login/page';
 const App = () => {
     return (
       <div>
-        <div className=''>
+        <div className='bg-black'>
      <h1>hello</h1>
         </div>
         <Router> 
