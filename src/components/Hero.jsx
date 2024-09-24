@@ -12,7 +12,7 @@ const Hero = () => {
                 Save agents in the field
             </div>
             <div className='my-5'>
-                <button className='bg-green-500 font-bold px-5 py-2 rounded-lg hover:bg-green-700'>Crack Case</button>
+                <button className='bg-green-500 font-bold px-5 py-3 rounded-lg hover:bg-green-700'>Crack Case</button>
             </div>
         </div>
         <div className='flex flex-col'>

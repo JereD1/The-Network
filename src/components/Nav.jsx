@@ -1,5 +1,7 @@
-import React from 'react'
+
 import MainNetworkLogo from '../assets/NewNetworkLogo.png'
+import LoginPage from '../pages/login/page'
+
 
 const Nav = () => {
   return (
@@ -13,8 +15,12 @@ const Nav = () => {
             <li className='hover:text-green-500'>Team</li>
             </div>       
           <div className='flex gap-10'>
+            <Link to='/login'>
             <button className='text-white border-green-500 border rounded-lg px-6 py-2 hover:bg-green-600'>Sign Up</button>
+            </Link>
+            <Link to='/login'>
             <button className='text-white bg-green-500 px-6 py-2 rounded-lg hover:bg-green-600'>Login</button>
+            </Link>
             </div>
       </div>
       </div> 
