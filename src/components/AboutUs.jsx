@@ -1,4 +1,5 @@
 import React from 'react'
+import TheNetwork from '../assets/code.png'
 
 const AboutUs = () => {
   return (
@@ -8,8 +9,8 @@ const AboutUs = () => {
             <h2>We are determined to improve your problem solving skills</h2>
         </div>
         <div className='flex justify-center items-center mt-10 mb-20'>
-            <div className='relative w-[600px] h-[400px] bg-holder'>
-
+            <div className='w-[500px] h-[500px] bg-holder items-center'>
+             <img src={TheNetwork} width='500px' alt="TheNetwork" />
             </div>
             <div className='absolute right-[500px] w-[300px] h-[300px] flex  items-center bg-green-800'>
                 <div className='text-white px-5 py-4'>

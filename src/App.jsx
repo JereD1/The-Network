@@ -6,13 +6,14 @@ import CreateTeam from './components/CreateTeam'
 import MissionVission from './components/MissionVission'
 import AboutUs from './components/AboutUs'
 import BuiltDiff from './components/BuiltDifferent'
-
+import Hero from './components/Hero'
 
 const App = () => {
   return (
     <div>
-    <div className=' mx-2 mt-4  lg:mx-48 lg:mt-20 '>
-      <Nav />
+        <Nav />
+         <div className=' mx-2 mt-4  lg:mx-48 lg:mt-20 '>
+      <Hero />
       <BuiltDiff />
       <AboutUs />
       <MissionVission />
