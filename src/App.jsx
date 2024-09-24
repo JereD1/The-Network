@@ -10,13 +10,15 @@ import BuiltDiff from './components/BuiltDifferent'
 
 const App = () => {
   return (
-    <div className='mx-48 mt-20 '>
+    <div>
+    <div className=' mx-2 mt-4  lg:mx-48 lg:mt-20 '>
       <Nav />
       <BuiltDiff />
       <AboutUs />
       <MissionVission />
       <CreateTeam />
-      <Footer />
+    </div>
+    <Footer />
     </div>
   )
 }
