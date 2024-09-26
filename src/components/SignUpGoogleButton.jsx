@@ -3,11 +3,13 @@ import { auth } from '../../firebase/firebaseConfig';
 import { FcGoogle } from "react-icons/fc";
 import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { doc, setDoc, getFirestore } from 'firebase/firestore';
+import { useNavigate } from 'react-router-dom';
 
 const SignUpGoogleButton = () => {
     const [error, setError] = useState('');
     const provider = new GoogleAuthProvider();
     const db = getFirestore();
+    const navigate = useNavigate();
 
     const signInWithGoogle = async () => {
         try {
@@ -25,6 +27,8 @@ const SignUpGoogleButton = () => {
             });
 
             console.log('User signed in with Google:', user);
+
+            navigate('/dashboard');
         } catch (err) {
             console.error('Error during Google sign in:', err);
             setError('Failed to sign in with Google');
@@ -32,13 +36,16 @@ const SignUpGoogleButton = () => {
     };
 
     return (
-        <div className='flex justify-center items-center my-4'>
-            <button onClick={signInWithGoogle} className='flex justify-center gap-2 items-center border-2 rounded-lg w-[400px] p-2'>
-                <FcGoogle size={25} className='' />
-                <span className='text-black'>Sign up with Google</span>
-            </button>
-            {error && <p className='text-red-500'>{error}</p>}
-        </div>
+        <div className='flex flex-col justify-center items-center my-4'>
+        <button 
+            onClick={signInWithGoogle} 
+            className='flex justify-center gap-2 items-center border-2 rounded-lg w-full sm:w-[400px] p-2 hover:border-black transition duration-200'
+        >
+            <FcGoogle size={25} />
+            <span className='text-black'>Sign up with Google</span>
+        </button>
+        {error && <p className='text-red-500 text-sm mt-2'>{error}</p>}
+    </div>
     );
 }
 

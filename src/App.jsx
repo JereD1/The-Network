@@ -1,29 +1,23 @@
-import Nav from './components/Nav'
-import Footer from './components/Footer'
-import CreateTeam from './components/CreateTeam'
-import MissionVission from './components/MissionVission'
-import AboutUs from './components/AboutUs'
-import BuiltDiff from './components/BuiltDifferent'
-import Hero from './components/Hero'
 import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } from 'react-router-dom';
-import LoginPage from './pages/login/page'
+import HomePage from './pages/HomePage'
+import MainLayout from './layout/MainLayout'
+import DashboardPage from './pages/DashboardPage'
+import LoginPage from './pages/LoginPage'
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path='/' element={<MainLayout />} >
+    <Route index element={<HomePage />}  />
+    <Route path='/login' element={<LoginPage />} />
+    <Route path='/dashboard' element={<DashboardPage />} />
+    </Route>
+    
+)
+);
 
 const App = () => {
-  return (
-    <div>
-        <Nav />
-         <div className=' mx-2 mt-4 lg:mx-48 lg:mt-20 '>
-      <Hero />
-      <BuiltDiff />
-      <AboutUs />
-      <MissionVission />
-      <CreateTeam />
-    </div>
-    <Footer />
-    </div>
-    //comment
+  return  <RouterProvider router={router} />;
     
-  )
 }
 
 export default App;
