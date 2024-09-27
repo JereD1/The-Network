@@ -12,6 +12,7 @@ const CreateAccount = () => {
     const [error, setError] = useState('');
     const navigate = useNavigate();
     const points = 0; // Initialize points
+    const tasksCompleted = 0; // Initialize tasks completed
 
     const handleSignUp = async (e) => {
         e.preventDefault();
@@ -22,6 +23,7 @@ const CreateAccount = () => {
             await setDoc(doc(db, 'users', user.uid), {
                 username: username,
                 points: points,
+                tasksCompleted: tasksCompleted, // Adding tasks completed
             });
 
             console.log('User signed up and added to Firestore');
