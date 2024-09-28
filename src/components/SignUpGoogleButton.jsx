@@ -10,6 +10,7 @@ const SignUpGoogleButton = () => {
     const provider = new GoogleAuthProvider();
     const db = getFirestore();
     const navigate = useNavigate();
+    const tasksCompleted = 0; 
 
     const signInWithGoogle = async () => {
         try {
@@ -24,6 +25,7 @@ const SignUpGoogleButton = () => {
             await setDoc(doc(db, 'users', user.uid), {
                 username: username,
                 points: points,
+                tasksCompleted: tasksCompleted
             });
 
             console.log('User signed in with Google:', user);
