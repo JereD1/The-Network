@@ -22,7 +22,7 @@ const Nav = () => {
         </div>
 
         <div className='hidden lg:flex gap-10'>
-          <Link to='/signup'>
+          <Link to='/login'>
             <button className='text-white border-green-500 border rounded-lg px-6 py-2 hover:bg-green-600'>Sign Up</button>
           </Link>
           <Link to='/login'>

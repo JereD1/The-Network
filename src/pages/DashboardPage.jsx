@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'
 import { requireAuth } from '../../firebase/auth'
+import Dashboard from '../components/Dasboard'
+import Setting from '../components/Settings'
 
 const DashboardPage = () => {
     const navigate = useNavigate();
@@ -15,10 +17,7 @@ const DashboardPage = () => {
     
   return (
     <div>
-        <div>
-            helllo
-        </div>
-      
+        < Dashboard />
     </div>
   )
 }
